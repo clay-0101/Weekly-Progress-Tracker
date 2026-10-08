@@ -1,4 +1,5 @@
 import { Rocket } from "lucide-react";
+import { NavLink } from "react-router";
 
 const HeroCard = () =>{
   return (
@@ -9,10 +10,10 @@ const HeroCard = () =>{
         <br />
         Interview Prep
       </h2>
-      <button className="flex w-fit items-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black">
+      <NavLink to="/questions" className="flex w-fit items-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black">
         <Rocket size={18} />
         Start Now
-      </button>
+      </NavLink>
     </div>
   );
 }

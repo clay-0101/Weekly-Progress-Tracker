@@ -1,16 +1,7 @@
 import useDashboard from "../../hook/DashboardHook";
 
-const questions = [
-  { id: 1, title: "Two Sum", category: "DSA", difficulty: "Easy", status: "Completed" },
-  { id: 2, title: "Explain git rebase vs merge", category: "Git", difficulty: "Medium", status: "In Progress" },
-  { id: 3, title: "What is the event loop?", category: "Technical", difficulty: "Medium", status: "Pending" },
-  { id: 4, title: "Merge Intervals", category: "DSA", difficulty: "Hard", status: "In Progress" },
-];
-
-
-
 export default function RecentQuestions() {
-let {  categoryStyle,difficultyStyle, statusStyle} =  useDashboard()
+let {  categoryStyle,difficultyStyle, statusStyle, questions} =  useDashboard()
   return (
     <div className="rounded-3xl border border-white/10 bg-white/[0.07] p-5 backdrop-blur">
       <h2 className="mb-3 text-lg font-semibold">Recent questions</h2>
