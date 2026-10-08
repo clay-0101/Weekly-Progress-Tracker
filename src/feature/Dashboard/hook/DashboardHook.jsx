@@ -1,8 +1,11 @@
 import React from 'react'
 import useQuestions from '../../Questions/hook/QuestionHook';
+import { useSelector } from 'react-redux';
 
 const useDashboard = () => {
-    let { questions } = useQuestions();
+    const questions = useSelector(
+        state => state.questions.allQuestions
+    )
 
     // total questions
     const total = questions.length;
@@ -44,7 +47,7 @@ const useDashboard = () => {
     };
     return {
         gitCompleted, percent, total, technicalCompleted, dsaCompleted,
-        categoryStyle,difficultyStyle, statusStyle
+        categoryStyle, difficultyStyle, statusStyle, questions
     }
 }
 
