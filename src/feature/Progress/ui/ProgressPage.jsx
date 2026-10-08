@@ -14,7 +14,7 @@ export default function ProgressPage() {
         </div>
       </div>
       <StatusProgress/>
-      <WeeklyProgress/>
+      {/* <WeeklyProgress/> */}
     </div>
   );
 }

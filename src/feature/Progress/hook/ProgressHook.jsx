@@ -28,10 +28,20 @@ const useProgress = () => {
 
     let overallDone = categories.reduce((sum , c) => sum + c.done , 0)
     let overallTotal = categories.reduce((sum , c) => sum + c.total , 0)
+    
+    let overallInProgress = (
+        questions.filter((q)=> q.status === "In Progress").length +
+        machineCoding.filter((t)=> t.status === "In Progress").length
+    )
+    let overallPending = (
+        questions.filter((q)=> q.status === "Pending").length +
+        machineCoding.filter((t)=> t.status === "Pending").length
+    )
+
     let overallPercentage = percent(overallDone, overallTotal)
 
     return {
-        categories , percent, overallDone , overallTotal, overallPercentage
+        categories , percent, overallDone , overallTotal,overallPending, overallInProgress,overallPercentage
     }
 }
 

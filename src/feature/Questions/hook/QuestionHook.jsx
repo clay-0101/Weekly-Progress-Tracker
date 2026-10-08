@@ -45,6 +45,7 @@ const useQuestions = () => {
             status: "",
         })
     }
+
     function updateQuestionHandle(data) {
         let updatedQuetionList = questions.map((q) => {
             return q.id === updateQuestion.id ? { ...q, ...data } : q
@@ -82,6 +83,7 @@ const useQuestions = () => {
         return data
     }, [questions, status, category, difficulty, search])
 
+    
 
 
     return {
