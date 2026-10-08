@@ -1,5 +1,4 @@
 import { ListChecks, Braces, Cpu, GitBranch } from "lucide-react";
-import useQuestions from "../../../Questions/hook/QuestionHook";
 import useDashboard from "../../hook/DashboardHook";
 
 
@@ -18,7 +17,7 @@ let {gitCompleted, percent, total, technicalCompleted, dsaCompleted} = useDashbo
         <div className="h-2.5 overflow-hidden rounded-full bg-white/10">
           <div
             className="h-full rounded-full bg-gradient-to-r from-orange-500 to-yellow-400"
-            style={{ width: "100%" }}
+            style={{ width: total === 0 ? "0%" : "100%" }}
           />
         </div>
       </div>
