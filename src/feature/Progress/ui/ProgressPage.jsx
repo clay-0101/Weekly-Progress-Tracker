@@ -1,7 +1,7 @@
 import CategoryProgress from "./components/CategoryProgress";
 import OverallCompletion from "./components/OverallCompletion";
 import StatusProgress from "./components/StatusProgress";
-import WeeklyProgress from "./components/WeeklyProgress";
+
 
 
 export default function ProgressPage() {

@@ -1,5 +1,4 @@
 import React from 'react'
-import useQuestions from '../../Questions/hook/QuestionHook';
 import { useSelector } from 'react-redux';
 
 const useDashboard = () => {

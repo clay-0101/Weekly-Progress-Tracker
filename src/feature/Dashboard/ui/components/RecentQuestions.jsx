@@ -7,7 +7,8 @@ let {  categoryStyle,difficultyStyle, statusStyle, questions} =  useDashboard()
       <h2 className="mb-3 text-lg font-semibold">Recent questions</h2>
 
       <div className="flex flex-col gap-3">
-        {questions.map((q) => (
+        {questions.slice(0,10).map((q) => (
+          
           <div
             key={q.id}
             className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-2xl bg-white/[0.06] px-4 py-3"

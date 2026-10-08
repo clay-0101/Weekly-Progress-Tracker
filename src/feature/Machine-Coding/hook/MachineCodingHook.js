@@ -27,7 +27,7 @@ const useMachineCoding = () => {
     let { reset, register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange", values: updateMachineCoding || {} })
 
     function addMachineCoding(data) {
-        let updatedMachineCodingList = [...machineCoding, { ...data, id: Date.now(), date: new Date().toLocaleDateString("en-GB") }]
+        let updatedMachineCodingList = [{ ...data, id: Date.now(), date: new Date().toLocaleDateString("en-GB") }, ...machineCoding]
         dispatch(setMachineCoding(updatedMachineCodingList))
         reset({ title: "", difficulty: "", status: "", timeSpent: "" })
     }

@@ -36,7 +36,7 @@ const useQuestions = () => {
     let { reset, register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange", values: updateQuestion || {} })
 
     function addQuestion(data) {
-        let updatedQuestionList = [...questions, { ...data, id: Date.now(), date: new Date().toLocaleDateString("en-GB") }]
+        let updatedQuestionList = [{ ...data, id: Date.now(), date: new Date().toLocaleDateString("en-GB") },...questions]
         dispatch(setQuestion(updatedQuestionList))
         reset({
             title: "",
