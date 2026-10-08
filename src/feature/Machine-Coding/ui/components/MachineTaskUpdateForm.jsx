@@ -53,7 +53,16 @@ export default function UpdateMachineCoding() {
 
                     <div>
                         <label className={label}>Time spent (hrs)</label>
-                        <input type="number" {...register("timeSpent", { required: "Time spent is required" })} className={field} placeholder="0" />
+                        <input 
+                        type="number"
+                        step="0.1"
+                            {...register("timeSpent", {
+                                required: "Time spent is required",
+                                min: {
+                                    value: 0,
+                                    message: "Value must be 0 or greater"
+                                }
+                            })} className={field} placeholder="0" />
                         {errors.timeSpent && <p className="text-[12px] text-red-500">{errors.timeSpent.message}</p>}
                     </div>
 
